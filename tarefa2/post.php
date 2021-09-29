@@ -19,7 +19,7 @@
 		$url = 'https://raw.githubusercontent.com/krypton-tech/test-dev-2021/main/atividades.json';
 		$ch = curl_init($url);
 		curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-		$resul = json_decode(curl_exec($ch));
+		$resul = json_decode(curl_exec($ch), true);
 		
 		$linhas = 5; // números de linhas por página
 		
@@ -27,19 +27,20 @@
 		
 		$pag = ceil($count / $linhas); // total de paginas
 		
-		$finalPag = $paginaAtual * $linhas; // posição da primeira linha da página
+		$finalPag = $paginaAtual * $linhas; // posição da ultima linha da página
 		
-		$inicioPag = $finalPag - $linhas; // posição da ultima linha da página
+		$inicioPag = $finalPag - $linhas; // posição da primeira linha da página
 		
 		$arrCorpo;
-		foreach($resul as $key => $valeu){
-			if(($key >= $inicioPag) && ($key < $finalPag)){ //percorre as linhas da páginas
+		
+		for($i = $inicioPag; $i < $finalPag; $i++){ // restringe o número de loops para o número de linhas que será exibido
+			if($i < $count){
 				$arrCorpo[] = array(
-						'atividade' => $valeu->atividade,
-						'hora' => $valeu->hora
+						'atividade' => $resul[$i]['atividade'],
+						'hora' => $resul[$i]['hora']
 				);
-			}
-		}
+			};	
+		}		
 		
 		if(empty($arrCorpo)){
 			$arrCorpo = array();
