@@ -1,0 +1,99 @@
+
+
+			.cadastro{
+				width: 60%;
+				margin: auto;
+				margin-left: auto;
+				margin-right: auto;
+				margin-top: 15px;
+				margin-bottom: 15px;
+				text-align: center;
+				border: 1px;
+				border-style: solid;
+			}
+			
+			.novocarro_ti{
+				width: 60%;
+				margin: auto;
+				height: 80px;
+				text-align: center;
+				
+			}
+			
+			.novocarro_ti>label{
+				color: blue;
+				font-size: 50px;
+			}
+			
+			.conteiner{
+				width:100%; 
+				display: flex;  
+				
+				flex-wrap: wrap;
+				border: 1px; 
+				border-style: solid;
+			}
+		
+			.carro{
+				width: 200px; 
+				height: 200px;
+				margin:10px; 
+				padding-left: 5px;
+				padding-right: 5px;
+				position:relative;
+				border:3px; 
+				border-style: solid; 
+				border-color:blue;
+			}
+			
+			.button{
+				border: none;
+				padding: 5px 5px;
+				text-align: center;
+				text-decoration: none;
+				font-size: 16px;
+				cursor: pointer;
+			}
+			
+			.button:hover{
+				background-color: red;
+			}
+			
+			.bnt_exlu{
+				position:absolute; 
+				bottom: 5px; 
+				left: 35%; 
+
+			}
+			
+			.ncad-e{
+				width: 47%;
+				display: inline-block;
+				text-align: right;
+				padding-right: 20px;
+				padding-top: 0px;
+			}
+			
+			.ncad-d{
+				width: 47%;
+				display: inline-block;
+				text-align: left;
+				padding-left: 20px;
+			}
+			
+			.nlabel{
+				width: 400px;
+			}
+			
+			.button-Carro{
+				border: none;
+				padding: 5px 5px;
+				text-align: center;
+				text-decoration: none;
+				font-size: 16px;
+				cursor: pointer;
+			}
+			
+			.button-Carro:hover{
+				background-color: blue;
+			}
